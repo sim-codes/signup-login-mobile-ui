@@ -46,6 +46,8 @@ export default function SignIn({ navigation }) {
 
             <View style={{flexDirection: 'column', justifyContent: 'center', margin: 20}}>
                 <Text style={styles.text}>Or signin with</Text>
+
+                {/* Social Media Icons */}
                 <View style={{flexDirection: 'row', justifyContent: 'center', gap: 30, margin: 20}}>
                     <Image source={require('../assets/g.png')} style={styles.icon} />
                     <Image source={require('../assets/x.png')} style={styles.icon} />
@@ -53,6 +55,7 @@ export default function SignIn({ navigation }) {
                 </View>
             </View>
 
+            {/* Navigation to the signup page */}
             <View style={{flexDirection: 'row', justifyContent: 'center', gap: 5, margin: 20}}>
                 <Text style={styles.text}>Don't have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
@@ -75,7 +78,7 @@ export default function SignIn({ navigation }) {
     signIpBtn: {
       justifyContent: 'center',
       alignItems: 'center',
-      height: 40,
+      height: 60,
       width: '100%',
       backgroundColor: '#FCB001',
       borderRadius: 10,

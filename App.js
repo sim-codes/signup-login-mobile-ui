@@ -11,17 +11,24 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    // Wrap the entire app in the NavigationContainer component
     <NavigationContainer>
-        {/* <View style={styles.container}> */}
-        {/* <Index /> */}
-        {/* <Signup /> */}
-        {/* <SignIn /> */}
-        {/* <StatusBar style="auto" /> */}
-      {/* </View> */}
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Index} options={{headerTitle: "", headerTransparent: true}} />
-        <Stack.Screen name="Login" component={SignIn} options={{headerTitle: "", headerTransparent: true}}/>
-        <Stack.Screen name="Signup" component={Signup} options={{headerTitle: "", headerTransparent: true}}/>
+        <Stack.Screen name="Home" component={Index} 
+        options={{
+          // Set the headerTitle to an empty string to hide the header
+          headerTitle: "", headerTransparent: true
+          }} />
+        <Stack.Screen name="Login" component={SignIn} 
+        options={{
+          // Set the headerTitle to an empty string to hide the header
+          headerTitle: "", headerTransparent: true
+          }}/>
+        <Stack.Screen name="Signup" component={Signup} 
+        options={{
+          // Set the headerTitle to an empty string to hide the header
+          headerTitle: "", headerTransparent: true
+          }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

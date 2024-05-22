@@ -12,11 +12,12 @@ export default function Signup({ navigation }) {
     const [showPassword1, setShowPassword1] = useState(false); 
     const [showPassword2, setShowPassword2] = useState(false); 
 
-    // Function to toggle the password visibility state 
+    // Function to toggle the password1 visibility state 
     const toggleShowPassword1 = () => {
         setShowPassword1(!showPassword1); 
     };
 
+    // Function to toggle the password2 visibility state 
     const toggleShowPassword2 = () => { 
         setShowPassword2(!showPassword2); 
     }; 
@@ -25,6 +26,7 @@ export default function Signup({ navigation }) {
 
             <Text style={styles.title}>Let's Get Started</Text>
 
+            {/* Input fields */}
             <View style={styles.inpCtn}>
                 <TextInput style={styles.input} placeholder='First Name'/>
                 <TextInput style={styles.input} placeholder='Last Name'/>
@@ -62,12 +64,15 @@ export default function Signup({ navigation }) {
                 </View>
             </View>
   
+            {/* Create account button */}
             <TouchableOpacity style={styles.signUpBtn}>
               <Text style={styles.sign}>Create Account</Text>
             </TouchableOpacity>
 
             <View style={{flexDirection: 'column', justifyContent: 'center', margin: 20}}>
                 <Text style={styles.text}>Or signup with</Text>
+
+                {/* Social media icons */}
                 <View style={{flexDirection: 'row', justifyContent: 'center', gap: 30, margin: 20}}>
                     <Image source={require('../assets/g.png')} style={styles.icon} />
                     <Image source={require('../assets/x.png')} style={styles.icon} />
@@ -75,6 +80,7 @@ export default function Signup({ navigation }) {
                 </View>
             </View>
 
+            {/* Add a navigation link to the login page */}
             <View style={{flexDirection: 'row', justifyContent: 'center', gap: 5, margin: 20}}>
                 <Text style={styles.text}>Alredy have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Login')}>
@@ -97,7 +103,7 @@ export default function Signup({ navigation }) {
     signUpBtn: {
       justifyContent: 'center',
       alignItems: 'center',
-      height: 40,
+      height: 60,
       width: '100%',
       backgroundColor: '#FCB001',
       borderRadius: 10,
